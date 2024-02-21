@@ -7,17 +7,21 @@
 
 import UIKit
 
-class PersonTableViewCell: UITableViewCell {
-    @IBOutlet weak var labelName: UILabel!
+final class PersonTableViewCell: UITableViewCell {
+    var labelName = PersonLabel()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        // Configure the view for the selected state
+    
+    override init(style: UITableViewCell.CellStyle = UITableViewCell.CellStyle.default, reuseIdentifier: String?) {
+        super.init(style: style, reuseIdentifier: reuseIdentifier)
+        addSubview(labelName)
+        labelName.translatesAutoresizingMaskIntoConstraints = false
+        labelName.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
+        labelName.rightAnchor.constraint(equalTo: rightAnchor, constant: 20).isActive = true
+        labelName.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        labelName.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
     func configureCell(person: Person?) {

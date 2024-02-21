@@ -10,7 +10,7 @@ import Foundation
 protocol PersonViewModelProtocol {
     var router: PersonRouterProtocol? {get}
     var output: PersonOutputProtocol? {get set}
-    /// To loaed Data frpm API
+    /// To load Data frpm API
     func loadData()
     var personList : [Person] {get}
 }

@@ -8,21 +8,34 @@
 import UIKit
 
 final class PersonViewController: BaseViewController {
-    @IBOutlet weak var tableView: UITableView?
     var viewModel: PersonViewModelProtocol?
+    private let cellId = "PersonTableViewCell"
+    lazy var tableView: UITableView = {
+        let table = UITableView(frame: .zero, style: .plain)
+        table.delegate = self
+        table.dataSource = self
+        table.register(PersonTableViewCell.self, forCellReuseIdentifier: self.cellId)
+        return table
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView?.dataSource = self
-        tableView?.delegate = self
         viewModel?.loadData()
+        self.title = Constant.title
+        self.navigationController?.setAppearance()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.view.addSubview(tableView)
+        tableView.frame = CGRectMake(0 , 0, self.view.frame.width, self.view.frame.height)
     }
 }
 
 extension PersonViewController: PersonOutputProtocol, AlertProtocol {
     
     func showResult() {
-        tableView?.reloadData()
+        tableView.reloadData()
     }
     
     func showError(_ error: String) {
@@ -41,8 +54,7 @@ extension PersonViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "PersonTableViewCell") as? PersonTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: self.cellId) as? PersonTableViewCell else {
             fatalError("Cell not found")
         }
         cell.configureCell(person: viewModel?.personList[indexPath.row])
@@ -58,7 +70,13 @@ extension PersonViewController: UITableViewDataSource {
 extension PersonViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView,
+                   heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
+    func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         self.showDetail(index: indexPath.row)
     }
 }

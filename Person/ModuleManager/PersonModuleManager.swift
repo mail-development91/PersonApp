@@ -9,7 +9,7 @@ import Foundation
 
 final class PersonModuleManager {
     private let networkManager : NetworkManagerProtocol
-    private let router = AppRounter()
+    private let router = AppRouter()
     
     init(_ network: NetworkManagerProtocol) {
         self.networkManager = network
@@ -18,7 +18,7 @@ final class PersonModuleManager {
     /// To get Person View controller
     /// - Returns: Person View controller
     func getPersonViewController() -> PersonViewController {
-        let viewConrtoller = PersonViewController.instantiateFromStoryboard()
+        let viewConrtoller = PersonViewController()
         viewConrtoller.viewModel = getViewModel()
         viewConrtoller.viewModel?.output = viewConrtoller
         return viewConrtoller

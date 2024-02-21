@@ -16,6 +16,17 @@ extension UINavigationController {
         guard let navigation = windowScene?.windows.first?.rootViewController as? UINavigationController else {
             fatalError("Fail To Load Detail")
         }
+        navigation.setAppearance()
         return navigation
     }
+    
+    func setAppearance() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = UIColor(red: 225/255, green: 235/255, blue: 230/255, alpha: 1)
+        self.navigationBar.standardAppearance = appearance
+        self.navigationBar.scrollEdgeAppearance = self.navigationBar.standardAppearance
+    }
 }
+
+

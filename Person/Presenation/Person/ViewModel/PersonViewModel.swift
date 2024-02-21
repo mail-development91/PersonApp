@@ -8,7 +8,6 @@
 import Foundation
 
 final class PersonViewModel: PersonViewModelProtocol {
-    
     var personList :[Person] = []
     var output: PersonOutputProtocol?
     var router: PersonRouterProtocol?

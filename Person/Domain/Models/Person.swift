@@ -40,6 +40,15 @@ struct Person: Codable {
     let website: String?
     let image: String?
     let address: Address?
+    
+    func getAddress() -> String {
+        let buildingNumber = address?.buildingNumber ?? ""
+        let streetName = address?.streetName ?? ""
+        let street = address?.street ?? ""
+        let city = address?.city ?? ""
+        let addressString = buildingNumber + ", " + streetName + ", " + street + ", " + city
+        return addressString
+    }
 }
 
 struct Address: Codable {

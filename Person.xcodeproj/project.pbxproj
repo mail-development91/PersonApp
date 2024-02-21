@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B9C90482B84656B00B318A1 /* AFError+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9C90472B84656B00B318A1 /* AFError+Extention.swift */; };
+		2B9C90482B84656B00B318A1 /* AFError+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9C90472B84656B00B318A1 /* AFError+Extension.swift */; };
 		2B9C904A2B84671400B318A1 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9C90492B84671400B318A1 /* Alert.swift */; };
 		2BD1429F2B7DEA2F00AB224C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1429E2B7DEA2F00AB224C /* AppDelegate.swift */; };
 		2BD142A12B7DEA2F00AB224C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142A02B7DEA2F00AB224C /* SceneDelegate.swift */; };
@@ -41,7 +41,6 @@
 		2BD1431C2B7F469500AB224C /* PersonOutput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD143022B7F469500AB224C /* PersonOutput.swift */; };
 		2BD1431D2B7F469500AB224C /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD143042B7F469500AB224C /* PersonTableViewCell.swift */; };
 		2BD1431E2B7F469500AB224C /* PersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD143062B7F469500AB224C /* PersonViewController.swift */; };
-		2BD143212B7F46B300AB224C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD1431F2B7F46B300AB224C /* Main.storyboard */; };
 		2BD143222B7F46B300AB224C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BD143202B7F46B300AB224C /* LaunchScreen.storyboard */; };
 		2BD143452B7F46E300AB224C /* PersonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BD143252B7F46E300AB224C /* PersonData.json */; };
 		2BD143462B7F46E300AB224C /* MockAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD143262B7F46E300AB224C /* MockAppRouter.swift */; };
@@ -73,6 +72,7 @@
 		2BD143692B80BCC800AB224C /* PersonUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD143672B80BCC700AB224C /* PersonUseCaseProtocol.swift */; };
 		2BD1436D2B80C40B00AB224C /* PersonDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1436C2B80C40B00AB224C /* PersonDetailRepository.swift */; };
 		2BD1436F2B80C42400AB224C /* PersonDetailRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1436E2B80C42400AB224C /* PersonDetailRepositoryProtocol.swift */; };
+		2BED4BC02B85FBEF0008F888 /* PersonLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED4BBF2B85FBEF0008F888 /* PersonLabel.swift */; };
 		3049A6B13955382B60AD197D /* Pods_Person_PersonUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3AC6F10123DF621B1C515DF /* Pods_Person_PersonUITests.framework */; };
 		D5AF3C328855774D6600A048 /* Pods_PersonTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29A3FD62E0DF4E58B95293DB /* Pods_PersonTests.framework */; };
 		E84733EA17EC052ABA57CD31 /* Pods_Person.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67A9D8C309563AC006F93E73 /* Pods_Person.framework */; };
@@ -97,7 +97,7 @@
 
 /* Begin PBXFileReference section */
 		29A3FD62E0DF4E58B95293DB /* Pods_PersonTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PersonTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B9C90472B84656B00B318A1 /* AFError+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AFError+Extention.swift"; sourceTree = "<group>"; };
+		2B9C90472B84656B00B318A1 /* AFError+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AFError+Extension.swift"; sourceTree = "<group>"; };
 		2B9C90492B84671400B318A1 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		2BD1429B2B7DEA2F00AB224C /* Person.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Person.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD1429E2B7DEA2F00AB224C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,7 +135,6 @@
 		2BD143022B7F469500AB224C /* PersonOutput.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonOutput.swift; sourceTree = "<group>"; };
 		2BD143042B7F469500AB224C /* PersonTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		2BD143062B7F469500AB224C /* PersonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewController.swift; sourceTree = "<group>"; };
-		2BD1431F2B7F46B300AB224C /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		2BD143202B7F46B300AB224C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BD143252B7F46E300AB224C /* PersonData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PersonData.json; sourceTree = "<group>"; };
 		2BD143262B7F46E300AB224C /* MockAppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockAppRouter.swift; sourceTree = "<group>"; };
@@ -167,6 +166,7 @@
 		2BD143672B80BCC700AB224C /* PersonUseCaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonUseCaseProtocol.swift; sourceTree = "<group>"; };
 		2BD1436C2B80C40B00AB224C /* PersonDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailRepository.swift; sourceTree = "<group>"; };
 		2BD1436E2B80C42400AB224C /* PersonDetailRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonDetailRepositoryProtocol.swift; sourceTree = "<group>"; };
+		2BED4BBF2B85FBEF0008F888 /* PersonLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonLabel.swift; sourceTree = "<group>"; };
 		67A9D8C309563AC006F93E73 /* Pods_Person.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Person.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C04F577510A9E5E5AE2D1FD /* Pods-PersonTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PersonTests.debug.xcconfig"; path = "Target Support Files/Pods-PersonTests/Pods-PersonTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B2EBCA7CFB1CB2D3DF911766 /* Pods-Person.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Person.release.xcconfig"; path = "Target Support Files/Pods-Person/Pods-Person.release.xcconfig"; sourceTree = "<group>"; };
@@ -353,7 +353,6 @@
 				2B9C90402B83656B00B318A1 /* Domain */,
 				2BD143202B7F46B300AB224C /* LaunchScreen.storyboard */,
 				2BD142A72B7DEA3000AB224C /* Assets.xcassets */,
-				2BD1431F2B7F46B300AB224C /* Main.storyboard */,
 				2BD142AC2B7DEA3000AB224C /* Info.plist */,
 			);
 			path = Person;
@@ -431,6 +430,7 @@
 			isa = PBXGroup;
 			children = (
 				2BD142EA2B7F469400AB224C /* PersonDetailView.swift */,
+				2BED4BBF2B85FBEF0008F888 /* PersonLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -449,7 +449,7 @@
 				2BD142F12B7F469500AB224C /* NetworkManagerProtocol.swift */,
 				2BD142EF2B7F469500AB224C /* NetworkManager.swift */,
 				2BD142F02B7F469500AB224C /* NetworkWrapper.swift */,
-				2B9C90472B84656B00B318A1 /* AFError+Extention.swift */,
+				2B9C90472B84656B00B318A1 /* AFError+Extension.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -738,7 +738,6 @@
 			files = (
 				2BD142A82B7DEA3000AB224C /* Assets.xcassets in Resources */,
 				2BD143222B7F46B300AB224C /* LaunchScreen.storyboard in Resources */,
-				2BD143212B7F46B300AB224C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -902,7 +901,7 @@
 				2BD1430E2B7F469500AB224C /* PersonDetailView.swift in Sources */,
 				2BD1430F2B7F469500AB224C /* PersonDetailViewController.swift in Sources */,
 				2BD143102B7F469500AB224C /* PersonDetailModuleManager.swift in Sources */,
-				2B9C90482B84656B00B318A1 /* AFError+Extention.swift in Sources */,
+				2B9C90482B84656B00B318A1 /* AFError+Extension.swift in Sources */,
 				2BD143092B7F469500AB224C /* PersonDetailUseCase.swift in Sources */,
 				2BD1430D2B7F469500AB224C /* PersonDetailViewModelProtocol.swift in Sources */,
 				2B9C904A2B84671400B318A1 /* Alert.swift in Sources */,
@@ -923,6 +922,7 @@
 				2BD1431E2B7F469500AB224C /* PersonViewController.swift in Sources */,
 				2BD1431B2B7F469500AB224C /* PersonViewModel.swift in Sources */,
 				2BD1436F2B80C42400AB224C /* PersonDetailRepositoryProtocol.swift in Sources */,
+				2BED4BC02B85FBEF0008F888 /* PersonLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1105,7 +1105,6 @@
 				INFOPLIST_FILE = Person/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1133,7 +1132,6 @@
 				INFOPLIST_FILE = Person/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

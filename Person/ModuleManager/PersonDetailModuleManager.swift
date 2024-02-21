@@ -18,7 +18,7 @@ final class PersonDetailModuleManager {
     /// - Parameter person: Person Model Object
     /// - Returns: It returns PersonDetailViewController
     func getPersonDetailViewController(_ person: Person) -> PersonDetailViewController {
-        let viewConrtoller = PersonDetailViewController.instantiateFromStoryboard()
+        let viewConrtoller = PersonDetailViewController()
         viewConrtoller.viewModel = getViewModel()
         viewConrtoller.viewModel?.personDetail = person
         viewConrtoller.viewModel?.output = viewConrtoller

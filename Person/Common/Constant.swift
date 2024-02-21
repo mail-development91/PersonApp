@@ -12,6 +12,12 @@ struct Constant {
     static let Ok = "Ok"
     static let Main = "Main"
     static let ErrorMessage = "Somthing went wrong"
+    static let title = "List"
+    static let name = "Name:"
+    static let gender = "Gender:"
+    static let DOB = "DOB:"
+    static let mobile = "Mobile:"
+    static let address = "Address:"
 }
 
 /// Constant used in Network Layer
