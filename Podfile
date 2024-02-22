@@ -6,7 +6,6 @@ target 'Person' do
   use_frameworks!
 
   # Pods for Person
-pod 'Alamofire'
 
   target 'PersonTests' do
     inherit! :search_paths

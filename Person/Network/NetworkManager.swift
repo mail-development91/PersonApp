@@ -6,46 +6,45 @@
 //
 
 import Foundation
-import Alamofire
 
-typealias Response<T> = DataResponse<T, AFError>
+enum NetworkError: Error {
+    case badURL
+    case badResponse
+    case errorDecodingData
+    case invalidURL
+}
 
-final class NetworkManager: NetworkManagerProtocol{
-    let network: NetworkWrapperProtocol
+final class NetworkManager: NetworkManagerProtocol {
+    private var urlSession: URLSession
     
-    init(network: NetworkWrapperProtocol) {
-        self.network = network
+    init(urlsession: URLSession = .shared) {
+        self.urlSession = urlsession
     }
     
-    /// Method - getData - To get data from network API
-    /// - Parameter completion: Complition willl be callled once API response is available.
-    func getData<T: Codable>(completion:@escaping (T?, AFError?) -> ()) {
-        self.network.request(url: NetworkConstants.url,
-                             parameters: NetworkConstants.params as? T,
-                             type: T.self) { response in
-            switch response.result {
-            case .success (let data):
-                completion(data, nil);
-                break
-            case .failure (let error):
-                completion(nil, error);
-                break
+    func fetch<T: Codable>(url: URL, completion: @escaping (Result<T, Error>) -> Void) {
+        
+        self.urlSession.dataTask(with: url, completionHandler: { data, response, error in
+            
+            guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+                completion(.failure(NetworkError.badResponse))
+                return
             }
-        }
+            
+            guard let data = data,
+                  let object = try? JSONDecoder().decode(T.self, from: data) else {
+                completion(.failure(NetworkError.errorDecodingData))
+                return
+            }
+            
+            completion(.success(object))
+        })
+        .resume()
     }
     
-    /// Method - getImage - To get Image from network API
-    /// - Parameter completion: Complition willl be callled once API response is available.
-    func getImage<T: Sendable>(completion:@escaping (T?) -> ()) {
-        self.network.requestImage(url: NetworkConstants.imageURL) { response in
-            switch response.result {
-            case .success (let data):
-                completion(data as? T)
-                break
-            case .failure:
-                completion(nil)
-                break
-            }
-        }
+    func fetchImage(url: URL, completion:@escaping (Data?, Error?) -> ()) {
+        self.urlSession.dataTask(with: url, completionHandler: { data, response, error in
+            completion(data, error)
+        })
+        .resume()
     }
 }
