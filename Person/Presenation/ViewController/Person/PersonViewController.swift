@@ -9,7 +9,7 @@ import UIKit
 
 final class PersonViewController: UIViewController {
     var viewModel: PersonViewModelProtocol?
-    private let cellId = "PersonTableViewCell"
+    private let cellId = String(describing: PersonTableViewCell.self)
     lazy var tableView: UITableView = {
         let table = UITableView(frame: .zero, style: .plain)
         table.delegate = self
@@ -34,16 +34,21 @@ final class PersonViewController: UIViewController {
 
 extension PersonViewController: PersonOutputProtocol, AlertProtocol {
     
+    /// show the data once it fetched from network
     func showResult() {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
     }
     
+    /// Show Error if it occured
+    /// - Parameter error: error message
     func showError(_ error: String) {
         showAlert(message: error, on: self)
     }
     
+    /// show detail if user click on any row of the list
+    /// - Parameter index: index of the row
     private func showDetail(index: Int) {
         guard let person = viewModel?.personList[index] as? Person else {
             return
@@ -54,6 +59,7 @@ extension PersonViewController: PersonOutputProtocol, AlertProtocol {
     
 extension PersonViewController: UITableViewDataSource {
     
+    /// TableView  DataSource method
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: self.cellId) as? PersonTableViewCell else {
@@ -63,6 +69,7 @@ extension PersonViewController: UITableViewDataSource {
         return cell
     }
     
+    /// TableView  DataSource method
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
         return self.viewModel?.personList.count ?? 0
@@ -71,11 +78,13 @@ extension PersonViewController: UITableViewDataSource {
 
 extension PersonViewController: UITableViewDelegate {
     
+    /// TableView  Delegate method
     func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
     
+    /// TableView  Delegate method
     func tableView(_ tableView: UITableView,
                    didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)

@@ -494,6 +494,15 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		2B6AC2F52B88685A00546E3E /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				2BD142A72B7DEA3000AB224C /* Assets.xcassets */,
+				2BD143202B7F46B300AB224C /* LaunchScreen.storyboard */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
 		2B9C903D2B83641000B318A1 /* Presenation */ = {
 			isa = PBXGroup;
 			children = (
@@ -616,8 +625,7 @@
 				2B9C903D2B83641000B318A1 /* Presenation */,
 				2B9C90402B83656B00B318A1 /* Domain */,
 				2B9C90432B8365C800B318A1 /* Data */,
-				2BD143202B7F46B300AB224C /* LaunchScreen.storyboard */,
-				2BD142A72B7DEA3000AB224C /* Assets.xcassets */,
+				2B6AC2F52B88685A00546E3E /* Misc */,
 				2BD142AC2B7DEA3000AB224C /* Info.plist */,
 			);
 			path = Person;

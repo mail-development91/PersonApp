@@ -9,8 +9,6 @@ import XCTest
 @testable import Person
 
 class NetworkManagerTest: XCTestCase, Mockable {
-    //var bundle: Bundle
-    
     
     var urlSession: URLSession!
     var networkManager: NetworkManagerProtocol!

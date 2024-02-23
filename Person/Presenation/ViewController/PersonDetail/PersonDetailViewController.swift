@@ -8,7 +8,7 @@
 import UIKit
 
 final class PersonDetailViewController: UIViewController {
-    var detailView = PersonDetailView()
+    private var detailView = PersonDetailView()
     var viewModel: PersonDetailViewModelProtocol?
     
     override func viewDidLoad() {
@@ -25,10 +25,15 @@ final class PersonDetailViewController: UIViewController {
 }
 
 extension PersonDetailViewController: PersonDetailOutputProtocol{
+    
+    /// Show image once received
+    /// - Parameter image: image data
     func showImage(_ image: PersonImage?) {
         detailView.showImage(image)
     }
     
+    
+    /// Show detail screen
     func showDetail() {
         self.title = viewModel?.personDetail?.firstname
         detailView.configureData(person: viewModel?.personDetail);

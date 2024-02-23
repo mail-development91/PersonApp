@@ -20,6 +20,7 @@ extension UINavigationController {
         return navigation
     }
     
+    /// Customize the appearnce of Nativation bar
     func setAppearance() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()

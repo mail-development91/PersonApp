@@ -7,7 +7,7 @@
 
 import Foundation
 
-class PersonUseCase: PersonUseCaseProtocol {
+final class PersonUseCase: PersonUseCaseProtocol {
     private let repository: PersonRepositoryProtocol?
     
     init(_ repository: PersonRepositoryProtocol) {

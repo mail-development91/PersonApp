@@ -8,6 +8,7 @@
 import UIKit
 
 final class PersonDetailView: UIView {
+    // properties for layout spaces & margins
     private let left: CGFloat = 40
     private let right: CGFloat = -40
     private let top: CGFloat = 10
@@ -18,18 +19,20 @@ final class PersonDetailView: UIView {
     private let imageHeight: CGFloat = 250
     
     // Labels for Person Details
-    var imageView = UIImageView()
-    var labelName = PersonLabel(text: Constant.name)
-    var labelGender = PersonLabel(text: Constant.gender)
-    var labelDOB = PersonLabel(text: Constant.DOB)
-    var labelMobile = PersonLabel(text: Constant.mobile)
-    var labelAddress = PersonLabel(text: Constant.address)
-    var labelNameValue = PersonLabel()
-    var labelGenderValue = PersonLabel()
-    var labelDOBValue = PersonLabel()
-    var labelMobileValue = PersonLabel()
-    var labelAddressValue = PersonLabel()
+    private var imageView = UIImageView()
+    private var labelName = PersonLabel(text: Constant.name)
+    private var labelGender = PersonLabel(text: Constant.gender)
+    private var labelDOB = PersonLabel(text: Constant.DOB)
+    private var labelMobile = PersonLabel(text: Constant.mobile)
+    private var labelAddress = PersonLabel(text: Constant.address)
+    private var labelNameValue = PersonLabel()
+    private var labelGenderValue = PersonLabel()
+    private var labelDOBValue = PersonLabel()
+    private var labelMobileValue = PersonLabel()
+    private var labelAddressValue = PersonLabel()
     
+    /// configure the view based on data provided
+    /// - Parameter person: person data which needs to be shown on view
     func configureData(person:Person?) {
         setupView()
         labelNameValue.text = (person?.firstname ?? "") + " " + (person?.lastname ?? "")
@@ -39,10 +42,15 @@ final class PersonDetailView: UIView {
         labelAddressValue.text = person?.getAddress()
     }
     
+    /// image needs to be loaded from the network
+    /// - Parameter viewModel: viewModel is comunicated to load the image
     func loadImage(_ viewModel: PersonDetailViewModelProtocol?) {
         viewModel?.loadImage()
     }
     
+    
+    /// Show the image once it is downloaded
+    /// - Parameter imageModel: image data which is downloaded, to be shown on screen
     func showImage(_ imageModel: PersonImage?) {
         DispatchQueue.main.async {
             self.imageView.image =  imageModel?.image
@@ -52,6 +60,7 @@ final class PersonDetailView: UIView {
 
 extension PersonDetailView {
     
+    /// to setup the view, add as subview and set he autolayout
     private func setupView() {
         self.addSubview(imageView)
         self.addSubview(labelName)

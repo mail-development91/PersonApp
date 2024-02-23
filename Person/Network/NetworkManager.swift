@@ -21,6 +21,10 @@ final class NetworkManager: NetworkManagerProtocol {
         self.urlSession = urlsession
     }
     
+    /// Method to fetch tha codable data from the network
+    /// - Parameters:
+    ///   - url: url of api , which needs to be fetch
+    ///   - completion:completion callback once data is receved.
     func fetch<T: Codable>(url: URL, completion: @escaping (Result<T, Error>) -> Void) {
         
         self.urlSession.dataTask(with: url, completionHandler: { data, response, error in
@@ -41,6 +45,10 @@ final class NetworkManager: NetworkManagerProtocol {
         .resume()
     }
     
+    /// Method to fetch tha image data from the network
+    /// - Parameters:
+    ///   - url: url of image , which needs to be fetch
+    ///   - completion:completion callback once image is receved.
     func fetchImage(url: URL, completion:@escaping (Data?, Error?) -> ()) {
         self.urlSession.dataTask(with: url, completionHandler: { data, response, error in
             completion(data, error)

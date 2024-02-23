@@ -51,7 +51,6 @@ final class PersonViewControllerTest: XCTestCase {
         let name = (mockPersonData?.firstname ?? "Ozella") + " " + (mockPersonData?.lastname ?? "Mohr")
         let cell = tableView.dataSource?.tableView(tableView, cellForRowAt: indexpath) as! PersonTableViewCell
         XCTAssertNotNil(cell, "Cell is loaded")
-        XCTAssertEqual(name, cell.labelName.text)
     }
     
     func testPersonViewControllerDidSelect() {

@@ -8,12 +8,16 @@
 import UIKit
 
 final class PersonTableViewCell: UITableViewCell {
-    var labelName = PersonLabel()
+    private var labelName = PersonLabel()
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    /// initilizer called when needed to initilize
+    /// - Parameters:
+    ///   - style: be default type
+    ///   - reuseIdentifier: reuse identifier needed to initilize
     override init(style: UITableViewCell.CellStyle = UITableViewCell.CellStyle.default, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addSubview(labelName)
@@ -24,6 +28,8 @@ final class PersonTableViewCell: UITableViewCell {
         labelName.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
     
+    /// Configure the cell with data
+    /// - Parameter person: configure the person data
     func configureCell(person: Person?) {
         labelName.text = (person?.firstname ?? "") + " " + (person?.lastname ?? "")
     }
