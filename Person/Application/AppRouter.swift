@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class AppRounter: PersonRouterProtocol {
+final class AppRouter: PersonRouterProtocol {
     lazy var network = NetworkManager()
     
     /// load the person view controller . This is ninitial view contoller
