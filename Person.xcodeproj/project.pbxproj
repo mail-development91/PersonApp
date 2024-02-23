@@ -27,6 +27,7 @@
 		2B6AC2F02B87D4DA00546E3E /* MockPersonRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AC2C12B862D1A00546E3E /* MockPersonRepository.swift */; };
 		2B6AC2F12B87D63A00546E3E /* PersonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BD143252B7F46E300AB224C /* PersonData.json */; };
 		2B6AC2F42B87E70400546E3E /* MockImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B6AC2F32B87E70400546E3E /* MockImage.png */; };
+		2B6AC2F72B88741100546E3E /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AC2F62B88741000546E3E /* AppRouter.swift */; };
 		2B9C904A2B84671400B318A1 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9C90492B84671400B318A1 /* Alert.swift */; };
 		2BD1429F2B7DEA2F00AB224C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1429E2B7DEA2F00AB224C /* AppDelegate.swift */; };
 		2BD142A12B7DEA2F00AB224C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142A02B7DEA2F00AB224C /* SceneDelegate.swift */; };
@@ -34,7 +35,6 @@
 		2BD142B62B7DEA3000AB224C /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142B52B7DEA3000AB224C /* PersonTests.swift */; };
 		2BD142C02B7DEA3000AB224C /* PersonUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142BF2B7DEA3000AB224C /* PersonUITests.swift */; };
 		2BD142C22B7DEA3000AB224C /* PersonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142C12B7DEA3000AB224C /* PersonUITestsLaunchTests.swift */; };
-		2BD142D22B7F464A00AB224C /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142D12B7F464A00AB224C /* AppRouter.swift */; };
 		2BD142D72B7F466B00AB224C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142D62B7F466B00AB224C /* Constant.swift */; };
 		2BD142D92B7F467500AB224C /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142D82B7F467500AB224C /* UINavigationController+Extension.swift */; };
 		2BD143072B7F469500AB224C /* PersonDetailServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142DD2B7F469400AB224C /* PersonDetailServiceProtocol.swift */; };
@@ -108,6 +108,7 @@
 		2B6AC2D72B87C0DA00546E3E /* NetworkManagerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManagerTest.swift; sourceTree = "<group>"; };
 		2B6AC2D82B87C0DA00546E3E /* Mockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		2B6AC2F32B87E70400546E3E /* MockImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MockImage.png; sourceTree = "<group>"; };
+		2B6AC2F62B88741000546E3E /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		2B9C90492B84671400B318A1 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		2BD1429B2B7DEA2F00AB224C /* Person.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Person.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD1429E2B7DEA2F00AB224C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,7 +120,6 @@
 		2BD142BB2B7DEA3000AB224C /* PersonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PersonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD142BF2B7DEA3000AB224C /* PersonUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonUITests.swift; sourceTree = "<group>"; };
 		2BD142C12B7DEA3000AB224C /* PersonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2BD142D12B7F464A00AB224C /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppRouter.swift; path = "../../../DemoApp 2/DemoApp/AppRouter.swift"; sourceTree = "<group>"; };
 		2BD142D62B7F466B00AB224C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		2BD142D82B7F467500AB224C /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		2BD142DD2B7F469400AB224C /* PersonDetailServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailServiceProtocol.swift; sourceTree = "<group>"; };
@@ -659,7 +659,7 @@
 			children = (
 				2BD1429E2B7DEA2F00AB224C /* AppDelegate.swift */,
 				2BD142A02B7DEA2F00AB224C /* SceneDelegate.swift */,
-				2BD142D12B7F464A00AB224C /* AppRouter.swift */,
+				2B6AC2F62B88741000546E3E /* AppRouter.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -955,7 +955,6 @@
 			files = (
 				2BD1430C2B7F469500AB224C /* PersonDetailOutput.swift in Sources */,
 				2BD1431C2B7F469500AB224C /* PersonOutput.swift in Sources */,
-				2BD142D22B7F464A00AB224C /* AppRouter.swift in Sources */,
 				2BD1431A2B7F469500AB224C /* PersonViewModelProtocol.swift in Sources */,
 				2BD143142B7F469500AB224C /* PersonModuleManager.swift in Sources */,
 				2BD143172B7F469500AB224C /* Person.swift in Sources */,
@@ -986,6 +985,7 @@
 				2BD1431E2B7F469500AB224C /* PersonViewController.swift in Sources */,
 				2BD1431B2B7F469500AB224C /* PersonViewModel.swift in Sources */,
 				2BD1436F2B80C42400AB224C /* PersonDetailRepositoryProtocol.swift in Sources */,
+				2B6AC2F72B88741100546E3E /* AppRouter.swift in Sources */,
 				2BED4BC02B85FBEF0008F888 /* PersonLabel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

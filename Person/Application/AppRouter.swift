@@ -8,18 +8,19 @@
 import Foundation
 import UIKit
 
-
-class AppRounter: PersonRouterProtocol {
+final class AppRounter: PersonRouterProtocol {
+    lazy var network = NetworkManager()
     
-    lazy var network = NetworkManager(network: NetworkWrapper())
-    
-    func loadPersonController() -> BaseViewController {
-        
+    /// load the person view controller . This is ninitial view contoller
+    /// - Returns: it returns person view controller
+    func loadPersonController() -> UIViewController {
         let module = PersonModuleManager(network)
         let controller = module.getPersonViewController()
         return controller
     }
     
+    /// Load the details of Peron
+    /// - Parameter person: Data of the person
     func loadPersonDetail(person: Person) {
         let module = PersonDetailModuleManager(network)
         let controller = module.getPersonDetailViewController(person)
