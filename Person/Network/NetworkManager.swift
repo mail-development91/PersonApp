@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// List of Network erros
 enum NetworkError: Error {
     case badURL
     case badResponse
@@ -14,11 +15,16 @@ enum NetworkError: Error {
     case invalidURL
 }
 
+/// NetworkManager - to get the data from API. network manager is implemented
 final class NetworkManager: NetworkManagerProtocol {
+    
+    /// URL session varable- To initialise the Session
     private var urlSession: URLSession
     
-    init(urlsession: URLSession = .shared) {
-        self.urlSession = urlsession
+    /// initialiser of netwokr Manager with URL session
+    /// - Parameter urlSession: It takes URLSession as param, Detault URL session is passed.
+    init(urlSession: URLSession = .shared) {
+        self.urlSession = urlSession
     }
     
     /// Method to fetch tha codable data from the network

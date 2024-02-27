@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// PersonDetailUseCaseProtocol
 protocol PersonDetailUseCaseProtocol {
     
     /// To load images

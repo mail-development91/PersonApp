@@ -9,12 +9,12 @@ import XCTest
 @testable import Person
 
 final class PersonRepositoryTest: XCTestCase {
-    let personService = MockPersonService()
+    let personDataManager = MockPersonDataManager()
     var personRepository: PersonRepository!
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        personRepository = PersonRepository(personService)
+        personRepository = PersonRepository(personDataManager)
     }
 
     override func tearDownWithError() throws {

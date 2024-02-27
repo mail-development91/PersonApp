@@ -8,10 +8,18 @@
 import Foundation
 
 final class PersonDetailViewModel: PersonDetailViewModelProtocol {
+    
+    /// personDetail - to show image in detail screen
     var personDetail : Person?
+    
+    /// output - to show the output
     var output: PersonDetailOutputProtocol?
+    
+    /// usecase - business logic
     private let useCase: PersonDetailUseCaseProtocol?
     
+    /// PersonDetailViewModel initializer
+    /// - Parameter useCase: business logic for PersonDetailViewModel
     init(_ useCase: PersonDetailUseCaseProtocol) {
         self.useCase = useCase
     }

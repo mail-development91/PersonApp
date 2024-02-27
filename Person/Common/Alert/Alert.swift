@@ -33,8 +33,10 @@ extension AlertProtocol {
         let alert = UIAlertController(title: title,
                                       message: message,
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: Constant.Ok,
+        alert.addAction(UIAlertAction(title: AppConstant.Ok,
                                       style: .cancel))
-        controller.present(alert, animated: true)
+        DispatchQueue.main.async {
+            controller.present(alert, animated: true)
+        }
     }
 }

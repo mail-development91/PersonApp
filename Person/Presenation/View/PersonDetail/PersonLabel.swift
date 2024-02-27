@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// Label Used on Person & Person Detail Screen
 final class PersonLabel: UILabel {
     
     /// Initilizer method
@@ -34,7 +35,7 @@ final class PersonLabel: UILabel {
     /// Initilizer method
     private func initializeLabel() {
         self.textAlignment = .left
-        self.font = UIFont.systemFont(ofSize: 18)
+        self.font = UIFont.systemFont(ofSize: AppConstant.fontSize)
         self.textColor = .black
     }
 }

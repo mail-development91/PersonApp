@@ -8,16 +8,30 @@
 import Foundation
 
 /// Constant used in App
-struct Constant {
+struct AppConstant {
     static let Ok = "Ok"
-    static let Main = "Main"
     static let ErrorMessage = "Somthing went wrong"
     static let title = "List"
+    static let fontSize : CGFloat = 18
+}
+
+/// All the String Constant
+struct ConstantString {
     static let name = "Name:"
     static let gender = "Gender:"
     static let DOB = "DOB:"
     static let mobile = "Mobile:"
     static let address = "Address:"
+    static let empty = ""
+    static let space = " "
+    static let comma = ", "
+}
+
+/// All constant value
+struct ConstantValue {
+    static let cellheight : CGFloat = 60
+    static let cellCount : Int = 0
+    static let navigationColor : CGFloat = 230/255
 }
 
 /// Constant used in Network Layer

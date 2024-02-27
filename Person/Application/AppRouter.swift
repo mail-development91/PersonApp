@@ -8,7 +8,10 @@
 import Foundation
 import UIKit
 
+/// AppRouter Class - Route the Vire Contoller
 final class AppRouter: PersonRouterProtocol {
+    
+    /// network manager variable
     lazy var network = NetworkManager()
     
     /// load the person view controller . This is ninitial view contoller

@@ -13,14 +13,14 @@ final class MockNetworkManager: NetworkManagerProtocol, Mockable {
     var loaded = false
     
     func fetch<T>(url: URL, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable, T : Encodable {
-        return loadJson(filename: "PersonData",
+        return loadJson(filename: MockConstant.fileName,
                         extensionType: .json,
                         type: T.self, isError: isError, completion: completion)
     }
     
     func fetchImage(url: URL, completion: @escaping (Data?, Error?) -> ()) {
         if isError {
-            completion(nil, PersonError(errorCode: 500, errorMessage: "Somthing Went Wrong!") as? Error)
+            completion(nil, PersonError(errorCode: MockConstant.errorCode2, errorMessage: MockConstant.errorMessage2) as? Error)
         } else {
             loaded = true
             completion(MockPersonData().getImageData(), nil)

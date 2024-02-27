@@ -13,7 +13,7 @@ import SnapshotTesting
 final class PersonDetailViewTest: XCTestCase {
 
     var perspnDetailView = PersonDetailView()
-    let mockPersonData = MockPersonData().getMockReponse().data?[0]
+    let mockPersonData = MockPersonData().getMockReponse().data?.first
     var personDetailViewController: PersonDetailViewController!
 
     

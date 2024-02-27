@@ -7,9 +7,14 @@
 
 import Foundation
 
+/// Detail Module Manager
 final class PersonDetailModuleManager {
+    
+    /// Network Manager - object
     private let networkManager : NetworkManagerProtocol
     
+    /// initialiser with network manager
+    /// - Parameter network: Network Manager - object
     init(_ network: NetworkManagerProtocol) {
         self.networkManager = network
     }
@@ -27,8 +32,8 @@ final class PersonDetailModuleManager {
     
     /// To get PersonDetailService
     /// - Returns: PersonDetailService Object
-    private func getService() -> PersonDetailServiceProtocol {
-        let service = PersonDetailService(networkManager)
+    private func getService() -> PersonDetailDataManagerProtocol {
+        let service = PersonDetailDataManager(networkManager)
         return service
     }
     

@@ -7,7 +7,11 @@
 
 import UIKit
 
+/// PersonTableViewCell - of Person List Screen
 final class PersonTableViewCell: UITableViewCell {
+    
+    /// variables of PersonTableViewCell
+    private let margin : CGFloat = 20
     private var labelName = PersonLabel()
     
     required init?(coder aDecoder: NSCoder) {
@@ -20,17 +24,22 @@ final class PersonTableViewCell: UITableViewCell {
     ///   - reuseIdentifier: reuse identifier needed to initilize
     override init(style: UITableViewCell.CellStyle = UITableViewCell.CellStyle.default, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubview(labelName)
-        labelName.translatesAutoresizingMaskIntoConstraints = false
-        labelName.leftAnchor.constraint(equalTo: leftAnchor, constant: 20).isActive = true
-        labelName.rightAnchor.constraint(equalTo: rightAnchor, constant: 20).isActive = true
-        labelName.topAnchor.constraint(equalTo: topAnchor).isActive = true
-        labelName.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        setupLabel()
     }
     
     /// Configure the cell with data
     /// - Parameter person: configure the person data
     func configureCell(person: Person?) {
-        labelName.text = (person?.firstname ?? "") + " " + (person?.lastname ?? "")
+        labelName.text = person?.getName()
+    }
+    
+    /// To setup label of Person List Screen
+    private func setupLabel() {
+        addSubview(labelName)
+        labelName.translatesAutoresizingMaskIntoConstraints = false
+        labelName.leftAnchor.constraint(equalTo: leftAnchor, constant: margin).isActive = true
+        labelName.rightAnchor.constraint(equalTo: rightAnchor, constant: margin).isActive = true
+        labelName.topAnchor.constraint(equalTo: topAnchor).isActive = true
+        labelName.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
     }
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// extention To UINavigationController- Added method to get current UI controller and To set apperance
 extension UINavigationController {
     
     /// Methods- get()  - To get current Navigation Controller
@@ -24,7 +25,9 @@ extension UINavigationController {
     func setAppearance() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = UIColor(red: 225/255, green: 235/255, blue: 230/255, alpha: 1)
+        appearance.backgroundColor = UIColor(red: ConstantValue.navigationColor,
+                                             green: ConstantValue.navigationColor,
+                                             blue: ConstantValue.navigationColor, alpha: 1)
         self.navigationBar.standardAppearance = appearance
         self.navigationBar.scrollEdgeAppearance = self.navigationBar.standardAppearance
     }

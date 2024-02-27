@@ -10,6 +10,7 @@ import SnapshotTesting
 @testable import Person
 
 final class PersonViewControllerTest: XCTestCase {
+    private let intZero : Int = 0
     
     var personViewController: PersonViewController!
     
@@ -39,16 +40,16 @@ final class PersonViewControllerTest: XCTestCase {
     
     func testPersonViewControllerNumberOfCell() {
         let tableView = personViewController.tableView
-        XCTAssertEqual(2, tableView.dataSource?.tableView(tableView, numberOfRowsInSection: 0))
+        XCTAssertEqual(2, tableView.dataSource?.tableView(tableView, numberOfRowsInSection: intZero))
     }
     
     func testPersonViewControllerCellForRow() {
         // "firstname":"Ozella","lastname":"Mohr"
         
         let tableView = personViewController.tableView
-        let indexpath = IndexPath(row: 0, section: 0)
-        let mockPersonData = MockPersonData().getMockReponse().data?[0]
-        let name = (mockPersonData?.firstname ?? "Ozella") + " " + (mockPersonData?.lastname ?? "Mohr")
+        let indexpath = IndexPath(row: intZero, section: intZero)
+        let mockPersonData = MockPersonData().getMockReponse().data?.first
+        let name = mockPersonData?.getName()
         let cell = tableView.dataSource?.tableView(tableView, cellForRowAt: indexpath) as! PersonTableViewCell
         XCTAssertNotNil(cell, "Cell is loaded")
     }
@@ -57,9 +58,9 @@ final class PersonViewControllerTest: XCTestCase {
         // "firstname":"Ozella","lastname":"Mohr"
         
         let tableView = personViewController.tableView
-        let indexpath = IndexPath(row: 0, section: 0)
-        let mockPersonData = MockPersonData().getMockReponse().data?[0]
-        let name = (mockPersonData?.firstname ?? "Ozella") + " " + (mockPersonData?.lastname ?? "Mohr")
+        let indexpath = IndexPath(row: intZero, section: intZero)
+        let mockPersonData = MockPersonData().getMockReponse().data?.first
+        let name = mockPersonData?.getName()
         tableView.delegate?.tableView?(tableView, didSelectRowAt: indexpath)
         XCTAssertNotNil(name, "First Cell is Selected !")
         
@@ -69,9 +70,9 @@ final class PersonViewControllerTest: XCTestCase {
         // "firstname":"Ozella","lastname":"Mohr"
         
         let tableView = personViewController.tableView
-        let indexpath = IndexPath(row: 0, section: 0)
-        let mockPersonData = MockPersonData().getMockReponse().data?[0]
-        let name = (mockPersonData?.firstname ?? "Ozella") + " " + (mockPersonData?.lastname ?? "Mohr")
+        let indexpath = IndexPath(row: intZero, section: intZero)
+        let mockPersonData = MockPersonData().getMockReponse().data?.first
+        let name = mockPersonData?.getName()
         tableView.delegate?.tableView?(tableView, didSelectRowAt: indexpath)
         
         personViewController.showResult()

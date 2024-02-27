@@ -7,17 +7,22 @@
 
 import Foundation
 
+/// PersonDetailRepository class confoms PersonDetailRepositoryProtocol
 final class PersonDetailRepository: PersonDetailRepositoryProtocol {
-    private let service: PersonDetailServiceProtocol?
     
-    init(_ service: PersonDetailServiceProtocol) {
-        self.service = service
+    /// Data manager - PersonDetailRepository
+    private let dataManager: PersonDetailDataManagerProtocol?
+    
+    /// PersonDetailRepository initializer
+    /// - Parameter dataManager: PersonDetailDataManager object
+    init(_ dataManager: PersonDetailDataManagerProtocol) {
+        self.dataManager = dataManager
     }
     
     /// To call Service to get Image from API
     /// - Parameter completion: complition is calback, once we get API response image
     func callImageService(completion: @escaping (PersonImage?) -> ()) {
-        service?.getImage(completion: { personData in
+        dataManager?.getImage(completion: { personData in
             completion(personData)
         })
     }

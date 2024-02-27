@@ -7,28 +7,53 @@
 
 import UIKit
 
+/// PersonViewController Class
 final class PersonViewController: UIViewController {
+    
+    /// ViewModel Object
     var viewModel: PersonViewModelProtocol?
+    
+    /// Cell Reusable Identifire
     private let cellId = String(describing: PersonTableViewCell.self)
+    
+    /// Table view object
     lazy var tableView: UITableView = {
-        let table = UITableView(frame: .zero, style: .plain)
+        let table = UITableView(frame: .zero,
+                                style: .plain)
         table.delegate = self
         table.dataSource = self
-        table.register(PersonTableViewCell.self, forCellReuseIdentifier: self.cellId)
+        table.register(PersonTableViewCell.self,
+                       forCellReuseIdentifier: self.cellId)
         return table
     }()
     
+    /// ViewDidLoad mothod of  PersonViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.loadData()
-        self.title = Constant.title
-        self.navigationController?.setAppearance()
+        setTitle()
+        setAppearance()
     }
     
+    /// /// viewWillAppear mothod of  PersonViewController
+    /// - Parameter animated: true OR false param
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.addSubview(tableView)
-        tableView.frame = CGRectMake(0 , 0, self.view.frame.width, self.view.frame.height)
+        tableView.frame = CGRectMake(0 ,
+                                     0,
+                                     self.view.frame.width,
+                                     self.view.frame.height)
+    }
+    
+    /// to set the title of tha screen
+    private func setTitle() {
+        self.title = AppConstant.title
+    }
+    
+    /// to set the appearnce of navigation bar
+    private func setAppearance() {
+        self.navigationController?.setAppearance()
     }
 }
 
@@ -72,7 +97,7 @@ extension PersonViewController: UITableViewDataSource {
     /// TableView  DataSource method
     func tableView(_ tableView: UITableView,
                    numberOfRowsInSection section: Int) -> Int {
-        return self.viewModel?.personList.count ?? 0
+        return self.viewModel?.personList.count ?? ConstantValue.cellCount
     }
 }
 
@@ -81,7 +106,7 @@ extension PersonViewController: UITableViewDelegate {
     /// TableView  Delegate method
     func tableView(_ tableView: UITableView,
                    heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 60
+        return ConstantValue.cellheight
     }
     
     /// TableView  Delegate method

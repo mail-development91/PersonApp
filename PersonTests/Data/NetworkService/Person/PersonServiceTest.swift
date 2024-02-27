@@ -11,12 +11,12 @@ import XCTest
 class PersonServiceTest: XCTestCase {
 
     let networkManager = MockNetworkManager() //MockNetworkManager(network: MockNetworkWrapper())
-    var service : PersonService!
+    var service : PersonDataManagerProtocol!
     
     override func setUpWithError() throws {
         //try super.setUpWithError()
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        service = PersonService(networkManager)
+        service = PersonDataManager(networkManager)
     }
 
     override func tearDownWithError() throws {

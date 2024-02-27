@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// NetworkManagerProtocol: This is service layer inteface, Mthod is implementad in class
 protocol NetworkManagerProtocol {
     
     /// Method to fetch tha codable data from the network

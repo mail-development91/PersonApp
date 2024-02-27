@@ -7,10 +7,17 @@
 
 import Foundation
 
+/// Person Module Manager - Assemble all the layers here
 final class PersonModuleManager {
+    
+    /// Network Manager Variable
     private let networkManager : NetworkManagerProtocol
+    
+    /// Router Variable
     private let router = AppRouter()
     
+    /// Initialiser with network Manager
+    /// - Parameter network: networkManager object
     init(_ network: NetworkManagerProtocol) {
         self.networkManager = network
     }
@@ -26,8 +33,8 @@ final class PersonModuleManager {
     
     /// To Get PersonService
     /// - Returns: PersonService object
-    private func getService() -> PersonServiceProtocol {
-        let service = PersonService(networkManager)
+    private func getService() -> PersonDataManagerProtocol {
+        let service = PersonDataManager(networkManager)
         return service
     }
     

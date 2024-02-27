@@ -8,10 +8,6 @@
 import Foundation
 @testable import Person
 
-enum FileExtensionType: String {
-    case json = ".json"
-}
-
 protocol Mockable: AnyObject {
     
     func loadJson<T: Decodable>(filename: String,
@@ -23,13 +19,17 @@ protocol Mockable: AnyObject {
 
 extension Mockable {
     
-    func loadJson<T: Decodable>(filename: String, extensionType: FileExtensionType, type: T.Type, isError: Bool, completion: @escaping (Result<T, Error>) -> Void) {
+    func loadJson<T: Decodable>(filename: String,
+                                extensionType: FileExtensionType,
+                                type: T.Type,
+                                isError: Bool,
+                                completion: @escaping (Result<T, Error>) -> Void) {
         
         if isError {
             completion(.failure(NetworkError.badResponse))
         }
         
-        guard let path = Bundle.main.path(forResource: "PersonData", ofType: "json") else {
+        guard let path = Bundle.main.path(forResource: MockConstant.fileName, ofType: extensionType.rawValue) else {
             fatalError("Failed to load Json file.")
         }
         
