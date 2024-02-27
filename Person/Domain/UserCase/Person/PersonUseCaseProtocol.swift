@@ -7,9 +7,11 @@
 
 import Foundation
 
+/// PersonUseCaseProtocol
 protocol PersonUseCaseProtocol {
     
     /// to Load Data from services
     /// - Parameter completion: completion callback
-    func loadData(completion: @escaping (PersonData?, PersonError?) -> ())
+    func loadData(completion: @escaping (PersonData?,
+                                         PersonError?) -> ())
 }

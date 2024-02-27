@@ -11,7 +11,8 @@ import Foundation
 final class MockPersonData {
     
     func getError() -> PersonError {
-        let error =  PersonError(errorCode: 500, errorMessage: "Person List not Found")
+        let error =  PersonError(errorCode: MockConstant.errorCode,
+                                 errorMessage: MockConstant.errorMessage)
         return error
     }
     
@@ -33,9 +34,11 @@ extension MockPersonData {
     
     private func getDataFromJSONFile() -> PersonData? {
         do {
-            if let filePath = Bundle.main.path(forResource: "PersonData", ofType: "json") {
+            if let filePath = Bundle.main.path(forResource: MockConstant.fileName,
+                                               ofType: FileExtensionType.json.rawValue) {
                 let data = try Data(contentsOf: URL(fileURLWithPath: filePath))
-                let results = try JSONDecoder().decode(PersonData.self, from: data)
+                let results = try JSONDecoder().decode(PersonData.self,
+                                                       from: data)
                 return results
             }
         } catch {
@@ -49,7 +52,8 @@ extension MockPersonData {
     
     func getImageData() -> Data? {
         do {
-            if let filePath = Bundle.main.path(forResource: "MockImage", ofType: "png") {
+            if let filePath = Bundle.main.path(forResource: MockConstant.imageName,
+                                               ofType: MockConstant.imageType) {
                 let imageData = try Data(contentsOf: URL(fileURLWithPath: filePath))
                 return imageData
             }

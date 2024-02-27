@@ -42,12 +42,20 @@ struct Person: Codable {
     let address: Address?
     
     func getAddress() -> String {
-        let buildingNumber = address?.buildingNumber ?? ""
-        let streetName = address?.streetName ?? ""
-        let street = address?.street ?? ""
-        let city = address?.city ?? ""
-        let addressString = buildingNumber + ", " + streetName + ", " + street + ", " + city
+        let buildingNumber = address?.buildingNumber ?? ConstantString.empty
+        let streetName = address?.streetName ?? ConstantString.empty
+        let street = address?.street ?? ConstantString.empty
+        let city = address?.city ?? ConstantString.empty
+        let addressString = buildingNumber + ConstantString.comma +
+                            streetName + ConstantString.comma +
+                            street + ConstantString.comma +
+                            city
         return addressString
+    }
+    
+    func getName() -> String {
+        return (firstname ?? ConstantString.empty) + ConstantString.space +
+                (lastname ?? ConstantString.empty)
     }
 }
 
@@ -72,30 +80,3 @@ struct PersonImage: Sendable, Equatable {
         }
     }
 }
-
-
-/*
-        {
-            "id": 1,
-            "firstname": "Anahi",
-            "lastname": "Bailey",
-            "email": "bonnie38@gmail.com",
-            "phone": "+7123361323901",
-            "birthday": "2006-11-30",
-            "gender": "female",
-            "address": {
-                "id": 0,
-                "street": "4949 Abernathy Mountains Suite 032",
-                "streetName": "Beatrice Ports",
-                "buildingNumber": "90093",
-                "city": "West Lori",
-                "zipcode": "28182-0234",
-                "country": "Bolivia",
-                "county_code": "CD",
-                "latitude": 86.515479,
-                "longitude": 172.847493
-            },
-            "website": "http://balistreri.com",
-            "image": "http://placeimg.com/640/480/people"
-        }
-*/

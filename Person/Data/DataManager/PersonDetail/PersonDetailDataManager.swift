@@ -7,9 +7,14 @@
 
 import Foundation
 
-final class PersonDetailService: PersonDetailServiceProtocol {
-    private let network :NetworkManagerProtocol
+/// PersonDetailDataManager class conforms PersonDetailDataManagerProtocol
+final class PersonDetailDataManager : PersonDetailDataManagerProtocol {
     
+    /// network manager object
+    private let network : NetworkManagerProtocol
+    
+    /// PersonDetailDataManager initializer
+    /// - Parameter network: network object
     init(_ network: NetworkManagerProtocol) {
         self.network = network
     }

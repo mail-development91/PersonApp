@@ -7,9 +7,14 @@
 
 import Foundation
 
+/// PersonDetailUseCase -class conforms PersonDetailUseCaseProtocol
 final class PersonDetailUseCase: PersonDetailUseCaseProtocol {
+    
+    /// repository object
     private let repository: PersonDetailRepositoryProtocol?
     
+    /// PersonDetailUseCase initializer
+    /// - Parameter repository: repository object
     init(_ repository: PersonDetailRepositoryProtocol) {
         self.repository = repository
     }

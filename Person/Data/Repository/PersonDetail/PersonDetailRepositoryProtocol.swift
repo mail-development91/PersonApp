@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// PersonDetailRepositoryProtocol
 protocol PersonDetailRepositoryProtocol {
     
     /// To call Service to get Image from API

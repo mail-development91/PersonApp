@@ -8,7 +8,7 @@
 import Foundation
 @testable import Person
 
-class MockPersonService: PersonServiceProtocol {
+class MockPersonDataManager: PersonDataManagerProtocol {
     var isError = false
     func getPersonList(completion: @escaping (PersonData?, PersonError?) -> ()) {
         let mockData = MockPersonData().getMockReponse()

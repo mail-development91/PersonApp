@@ -8,7 +8,7 @@
 import Foundation
 @testable import Person
 
-class MockPersonDetailService: PersonDetailServiceProtocol {
+class MockPersonDetailDataManager: PersonDetailDataManagerProtocol {
     let imageData = MockPersonData().getImageData()
     var isError = false
 

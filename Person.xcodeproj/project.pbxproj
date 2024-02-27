@@ -18,9 +18,9 @@
 		2B6AC2E62B87D4DA00546E3E /* MockPersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD143392B7F46E300AB224C /* MockPersonDetailViewModel.swift */; };
 		2B6AC2E72B87D4DA00546E3E /* MockPersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1432A2B7F46E300AB224C /* MockPersonViewModel.swift */; };
 		2B6AC2E82B87D4DA00546E3E /* MockAppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD143262B7F46E300AB224C /* MockAppRouter.swift */; };
-		2B6AC2E92B87D4DA00546E3E /* MockPersonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1432C2B7F46E300AB224C /* MockPersonService.swift */; };
+		2B6AC2E92B87D4DA00546E3E /* MockPersonDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1432C2B7F46E300AB224C /* MockPersonDataManager.swift */; };
 		2B6AC2EA2B87D4DA00546E3E /* MockPersonUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD143282B7F46E300AB224C /* MockPersonUseCase.swift */; };
-		2B6AC2EB2B87D4DA00546E3E /* MockPersonDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1433B2B7F46E300AB224C /* MockPersonDetailService.swift */; };
+		2B6AC2EB2B87D4DA00546E3E /* MockPersonDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1433B2B7F46E300AB224C /* MockPersonDetailDataManager.swift */; };
 		2B6AC2EC2B87D4DA00546E3E /* MockPersonDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1433A2B7F46E300AB224C /* MockPersonDetailUseCase.swift */; };
 		2B6AC2EE2B87D4DA00546E3E /* MockPersonDetailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AC2C32B862D3300546E3E /* MockPersonDetailRepository.swift */; };
 		2B6AC2EF2B87D4DA00546E3E /* MockPersonData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD143272B7F46E300AB224C /* MockPersonData.swift */; };
@@ -28,6 +28,8 @@
 		2B6AC2F12B87D63A00546E3E /* PersonData.json in Resources */ = {isa = PBXBuildFile; fileRef = 2BD143252B7F46E300AB224C /* PersonData.json */; };
 		2B6AC2F42B87E70400546E3E /* MockImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 2B6AC2F32B87E70400546E3E /* MockImage.png */; };
 		2B6AC2F72B88741100546E3E /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AC2F62B88741000546E3E /* AppRouter.swift */; };
+		2B6AC2FC2B8DCC7100546E3E /* MockConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AC2FB2B8DCC7100546E3E /* MockConstant.swift */; };
+		2B6AC2FE2B8DD4ED00546E3E /* MockStringData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6AC2FD2B8DD4ED00546E3E /* MockStringData.swift */; };
 		2B9C904A2B84671400B318A1 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9C90492B84671400B318A1 /* Alert.swift */; };
 		2BD1429F2B7DEA2F00AB224C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1429E2B7DEA2F00AB224C /* AppDelegate.swift */; };
 		2BD142A12B7DEA2F00AB224C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142A02B7DEA2F00AB224C /* SceneDelegate.swift */; };
@@ -37,8 +39,8 @@
 		2BD142C22B7DEA3000AB224C /* PersonUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142C12B7DEA3000AB224C /* PersonUITestsLaunchTests.swift */; };
 		2BD142D72B7F466B00AB224C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142D62B7F466B00AB224C /* Constant.swift */; };
 		2BD142D92B7F467500AB224C /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142D82B7F467500AB224C /* UINavigationController+Extension.swift */; };
-		2BD143072B7F469500AB224C /* PersonDetailServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142DD2B7F469400AB224C /* PersonDetailServiceProtocol.swift */; };
-		2BD143082B7F469500AB224C /* PersonDetailService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142DE2B7F469400AB224C /* PersonDetailService.swift */; };
+		2BD143072B7F469500AB224C /* PersonDetailDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142DD2B7F469400AB224C /* PersonDetailDataManagerProtocol.swift */; };
+		2BD143082B7F469500AB224C /* PersonDetailDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142DE2B7F469400AB224C /* PersonDetailDataManager.swift */; };
 		2BD143092B7F469500AB224C /* PersonDetailUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142E22B7F469400AB224C /* PersonDetailUseCase.swift */; };
 		2BD1430A2B7F469500AB224C /* PersonDetailUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142E32B7F469400AB224C /* PersonDetailUseCaseProtocol.swift */; };
 		2BD1430B2B7F469500AB224C /* PersonDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142E62B7F469400AB224C /* PersonDetailViewModel.swift */; };
@@ -48,8 +50,8 @@
 		2BD1430F2B7F469500AB224C /* PersonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142EC2B7F469400AB224C /* PersonDetailViewController.swift */; };
 		2BD143102B7F469500AB224C /* PersonDetailModuleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142ED2B7F469400AB224C /* PersonDetailModuleManager.swift */; };
 		2BD143142B7F469500AB224C /* PersonModuleManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142F32B7F469500AB224C /* PersonModuleManager.swift */; };
-		2BD143152B7F469500AB224C /* PersonService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142F62B7F469500AB224C /* PersonService.swift */; };
-		2BD143162B7F469500AB224C /* PersonServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142F72B7F469500AB224C /* PersonServiceProtocol.swift */; };
+		2BD143152B7F469500AB224C /* PersonDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142F62B7F469500AB224C /* PersonDataManager.swift */; };
+		2BD143162B7F469500AB224C /* PersonDataManagerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142F72B7F469500AB224C /* PersonDataManagerProtocol.swift */; };
 		2BD143172B7F469500AB224C /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD142FA2B7F469500AB224C /* Person.swift */; };
 		2BD1431A2B7F469500AB224C /* PersonViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD143002B7F469500AB224C /* PersonViewModelProtocol.swift */; };
 		2BD1431B2B7F469500AB224C /* PersonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD143012B7F469500AB224C /* PersonViewModel.swift */; };
@@ -109,6 +111,8 @@
 		2B6AC2D82B87C0DA00546E3E /* Mockable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mockable.swift; sourceTree = "<group>"; };
 		2B6AC2F32B87E70400546E3E /* MockImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MockImage.png; sourceTree = "<group>"; };
 		2B6AC2F62B88741000546E3E /* AppRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		2B6AC2FB2B8DCC7100546E3E /* MockConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockConstant.swift; sourceTree = "<group>"; };
+		2B6AC2FD2B8DD4ED00546E3E /* MockStringData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockStringData.swift; sourceTree = "<group>"; };
 		2B9C90492B84671400B318A1 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		2BD1429B2B7DEA2F00AB224C /* Person.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Person.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BD1429E2B7DEA2F00AB224C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,8 +126,8 @@
 		2BD142C12B7DEA3000AB224C /* PersonUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2BD142D62B7F466B00AB224C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		2BD142D82B7F467500AB224C /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
-		2BD142DD2B7F469400AB224C /* PersonDetailServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailServiceProtocol.swift; sourceTree = "<group>"; };
-		2BD142DE2B7F469400AB224C /* PersonDetailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailService.swift; sourceTree = "<group>"; };
+		2BD142DD2B7F469400AB224C /* PersonDetailDataManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailDataManagerProtocol.swift; sourceTree = "<group>"; };
+		2BD142DE2B7F469400AB224C /* PersonDetailDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailDataManager.swift; sourceTree = "<group>"; };
 		2BD142E22B7F469400AB224C /* PersonDetailUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailUseCase.swift; sourceTree = "<group>"; };
 		2BD142E32B7F469400AB224C /* PersonDetailUseCaseProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailUseCaseProtocol.swift; sourceTree = "<group>"; };
 		2BD142E62B7F469400AB224C /* PersonDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModel.swift; sourceTree = "<group>"; };
@@ -133,8 +137,8 @@
 		2BD142EC2B7F469400AB224C /* PersonDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewController.swift; sourceTree = "<group>"; };
 		2BD142ED2B7F469400AB224C /* PersonDetailModuleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailModuleManager.swift; sourceTree = "<group>"; };
 		2BD142F32B7F469500AB224C /* PersonModuleManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonModuleManager.swift; sourceTree = "<group>"; };
-		2BD142F62B7F469500AB224C /* PersonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonService.swift; sourceTree = "<group>"; };
-		2BD142F72B7F469500AB224C /* PersonServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonServiceProtocol.swift; sourceTree = "<group>"; };
+		2BD142F62B7F469500AB224C /* PersonDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDataManager.swift; sourceTree = "<group>"; };
+		2BD142F72B7F469500AB224C /* PersonDataManagerProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDataManagerProtocol.swift; sourceTree = "<group>"; };
 		2BD142FA2B7F469500AB224C /* Person.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		2BD143002B7F469500AB224C /* PersonViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewModelProtocol.swift; sourceTree = "<group>"; };
 		2BD143012B7F469500AB224C /* PersonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewModel.swift; sourceTree = "<group>"; };
@@ -147,14 +151,14 @@
 		2BD143272B7F46E300AB224C /* MockPersonData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPersonData.swift; sourceTree = "<group>"; };
 		2BD143282B7F46E300AB224C /* MockPersonUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPersonUseCase.swift; sourceTree = "<group>"; };
 		2BD1432A2B7F46E300AB224C /* MockPersonViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPersonViewModel.swift; sourceTree = "<group>"; };
-		2BD1432C2B7F46E300AB224C /* MockPersonService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPersonService.swift; sourceTree = "<group>"; };
+		2BD1432C2B7F46E300AB224C /* MockPersonDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPersonDataManager.swift; sourceTree = "<group>"; };
 		2BD1432E2B7F46E300AB224C /* PersonViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewModelTest.swift; sourceTree = "<group>"; };
 		2BD1432F2B7F46E300AB224C /* PersonServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonServiceTest.swift; sourceTree = "<group>"; };
 		2BD143302B7F46E300AB224C /* PersonUseCaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonUseCaseTest.swift; sourceTree = "<group>"; };
 		2BD143322B7F46E300AB224C /* PersonViewControllerTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonViewControllerTest.swift; sourceTree = "<group>"; };
 		2BD143392B7F46E300AB224C /* MockPersonDetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPersonDetailViewModel.swift; sourceTree = "<group>"; };
 		2BD1433A2B7F46E300AB224C /* MockPersonDetailUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPersonDetailUseCase.swift; sourceTree = "<group>"; };
-		2BD1433B2B7F46E300AB224C /* MockPersonDetailService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPersonDetailService.swift; sourceTree = "<group>"; };
+		2BD1433B2B7F46E300AB224C /* MockPersonDetailDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockPersonDetailDataManager.swift; sourceTree = "<group>"; };
 		2BD1433D2B7F46E300AB224C /* PersonDetailViewModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailViewModelTest.swift; sourceTree = "<group>"; };
 		2BD1433E2B7F46E300AB224C /* PersonDetailUseCaseTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailUseCaseTest.swift; sourceTree = "<group>"; };
 		2BD1433F2B7F46E300AB224C /* PersonDetailServiceTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonDetailServiceTest.swift; sourceTree = "<group>"; };
@@ -281,8 +285,8 @@
 		2B6AC29D2B860FF200546E3E /* Person */ = {
 			isa = PBXGroup;
 			children = (
-				2BD142F72B7F469500AB224C /* PersonServiceProtocol.swift */,
-				2BD142F62B7F469500AB224C /* PersonService.swift */,
+				2BD142F72B7F469500AB224C /* PersonDataManagerProtocol.swift */,
+				2BD142F62B7F469500AB224C /* PersonDataManager.swift */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -290,8 +294,8 @@
 		2B6AC29E2B860FFA00546E3E /* PersonDetail */ = {
 			isa = PBXGroup;
 			children = (
-				2BD142DD2B7F469400AB224C /* PersonDetailServiceProtocol.swift */,
-				2BD142DE2B7F469400AB224C /* PersonDetailService.swift */,
+				2BD142DD2B7F469400AB224C /* PersonDetailDataManagerProtocol.swift */,
+				2BD142DE2B7F469400AB224C /* PersonDetailDataManager.swift */,
 			);
 			path = PersonDetail;
 			sourceTree = "<group>";
@@ -392,7 +396,7 @@
 				2BD1432A2B7F46E300AB224C /* MockPersonViewModel.swift */,
 				2BD143282B7F46E300AB224C /* MockPersonUseCase.swift */,
 				2B6AC2C12B862D1A00546E3E /* MockPersonRepository.swift */,
-				2BD1432C2B7F46E300AB224C /* MockPersonService.swift */,
+				2BD1432C2B7F46E300AB224C /* MockPersonDataManager.swift */,
 			);
 			path = Person;
 			sourceTree = "<group>";
@@ -409,9 +413,11 @@
 			isa = PBXGroup;
 			children = (
 				2BD143252B7F46E300AB224C /* PersonData.json */,
+				2B6AC2FB2B8DCC7100546E3E /* MockConstant.swift */,
 				2B6AC2F32B87E70400546E3E /* MockImage.png */,
-				2BD143272B7F46E300AB224C /* MockPersonData.swift */,
 				2B6AC2D82B87C0DA00546E3E /* Mockable.swift */,
+				2BD143272B7F46E300AB224C /* MockPersonData.swift */,
+				2B6AC2FD2B8DD4ED00546E3E /* MockStringData.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -422,7 +428,7 @@
 				2BD143392B7F46E300AB224C /* MockPersonDetailViewModel.swift */,
 				2BD1433A2B7F46E300AB224C /* MockPersonDetailUseCase.swift */,
 				2B6AC2C32B862D3300546E3E /* MockPersonDetailRepository.swift */,
-				2BD1433B2B7F46E300AB224C /* MockPersonDetailService.swift */,
+				2BD1433B2B7F46E300AB224C /* MockPersonDetailDataManager.swift */,
 			);
 			path = PersonDetail;
 			sourceTree = "<group>";
@@ -503,11 +509,35 @@
 			path = Misc;
 			sourceTree = "<group>";
 		};
+		2B6AC2F82B8CA59800546E3E /* Alert */ = {
+			isa = PBXGroup;
+			children = (
+				2B9C90492B84671400B318A1 /* Alert.swift */,
+			);
+			path = Alert;
+			sourceTree = "<group>";
+		};
+		2B6AC2F92B8CA5A400546E3E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2BD142D82B7F467500AB224C /* UINavigationController+Extension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		2B6AC2FA2B8CA5B500546E3E /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				2BD142D62B7F466B00AB224C /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		2B9C903D2B83641000B318A1 /* Presenation */ = {
 			isa = PBXGroup;
 			children = (
-				2B6AC2A62B86115500546E3E /* View */,
 				2B6AC2A12B8610C600546E3E /* ViewController */,
+				2B6AC2A62B86115500546E3E /* View */,
 				2B6AC2A02B8610B600546E3E /* ViewModel */,
 			);
 			path = Presenation;
@@ -561,7 +591,7 @@
 			children = (
 				2BD142F92B7F469500AB224C /* Models */,
 				2BD1435D2B80BA9800AB224C /* Repository */,
-				2BD142F52B7F469500AB224C /* NetworkService */,
+				2BD142F52B7F469500AB224C /* DataManager */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -667,9 +697,9 @@
 		2BD142D32B7F465B00AB224C /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				2BD142D62B7F466B00AB224C /* Constant.swift */,
-				2BD142D82B7F467500AB224C /* UINavigationController+Extension.swift */,
-				2B9C90492B84671400B318A1 /* Alert.swift */,
+				2B6AC2FA2B8CA5B500546E3E /* Constant */,
+				2B6AC2F92B8CA5A400546E3E /* Extension */,
+				2B6AC2F82B8CA59800546E3E /* Alert */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -683,13 +713,13 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		2BD142F52B7F469500AB224C /* NetworkService */ = {
+		2BD142F52B7F469500AB224C /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
 				2B6AC29D2B860FF200546E3E /* Person */,
 				2B6AC29E2B860FFA00546E3E /* PersonDetail */,
 			);
-			path = NetworkService;
+			path = DataManager;
 			sourceTree = "<group>";
 		};
 		2BD142F92B7F469500AB224C /* Models */ = {
@@ -959,7 +989,7 @@
 				2BD143142B7F469500AB224C /* PersonModuleManager.swift in Sources */,
 				2BD143172B7F469500AB224C /* Person.swift in Sources */,
 				2BD143692B80BCC800AB224C /* PersonUseCaseProtocol.swift in Sources */,
-				2BD143072B7F469500AB224C /* PersonDetailServiceProtocol.swift in Sources */,
+				2BD143072B7F469500AB224C /* PersonDetailDataManagerProtocol.swift in Sources */,
 				2BD1430B2B7F469500AB224C /* PersonDetailViewModel.swift in Sources */,
 				2BD1429F2B7DEA2F00AB224C /* AppDelegate.swift in Sources */,
 				2BD1430E2B7F469500AB224C /* PersonDetailView.swift in Sources */,
@@ -969,12 +999,12 @@
 				2BD1430D2B7F469500AB224C /* PersonDetailViewModelProtocol.swift in Sources */,
 				2B9C904A2B84671400B318A1 /* Alert.swift in Sources */,
 				2BD1431D2B7F469500AB224C /* PersonTableViewCell.swift in Sources */,
-				2BD143152B7F469500AB224C /* PersonService.swift in Sources */,
+				2BD143152B7F469500AB224C /* PersonDataManager.swift in Sources */,
 				2BD142D92B7F467500AB224C /* UINavigationController+Extension.swift in Sources */,
 				2BD1430A2B7F469500AB224C /* PersonDetailUseCaseProtocol.swift in Sources */,
 				2BD143682B80BCC800AB224C /* PersonUseCase.swift in Sources */,
-				2BD143082B7F469500AB224C /* PersonDetailService.swift in Sources */,
-				2BD143162B7F469500AB224C /* PersonServiceProtocol.swift in Sources */,
+				2BD143082B7F469500AB224C /* PersonDetailDataManager.swift in Sources */,
+				2BD143162B7F469500AB224C /* PersonDataManagerProtocol.swift in Sources */,
 				2BD143642B80BC9200AB224C /* PersonRepositoryProtocol.swift in Sources */,
 				2BD143652B80BC9200AB224C /* PersonRepository.swift in Sources */,
 				2BD142A12B7DEA2F00AB224C /* SceneDelegate.swift in Sources */,
@@ -994,7 +1024,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B6AC2E92B87D4DA00546E3E /* MockPersonService.swift in Sources */,
+				2B6AC2E92B87D4DA00546E3E /* MockPersonDataManager.swift in Sources */,
 				2B6AC2E62B87D4DA00546E3E /* MockPersonDetailViewModel.swift in Sources */,
 				2B6AC2E72B87D4DA00546E3E /* MockPersonViewModel.swift in Sources */,
 				2B6AC2C62B862EDF00546E3E /* PersonRepositoryTest.swift in Sources */,
@@ -1004,6 +1034,8 @@
 				2B6AC2EA2B87D4DA00546E3E /* MockPersonUseCase.swift in Sources */,
 				2B6AC2EC2B87D4DA00546E3E /* MockPersonDetailUseCase.swift in Sources */,
 				2BD1434E2B7F46E300AB224C /* PersonServiceTest.swift in Sources */,
+				2B6AC2FE2B8DD4ED00546E3E /* MockStringData.swift in Sources */,
+				2B6AC2FC2B8DCC7100546E3E /* MockConstant.swift in Sources */,
 				2BD143592B7F46E300AB224C /* PersonDetailServiceTest.swift in Sources */,
 				2BD143572B7F46E300AB224C /* PersonDetailViewModelTest.swift in Sources */,
 				2B6AC2DE2B87D45D00546E3E /* Mockable.swift in Sources */,
@@ -1011,7 +1043,7 @@
 				2B6AC2EE2B87D4DA00546E3E /* MockPersonDetailRepository.swift in Sources */,
 				2BD1434F2B7F46E300AB224C /* PersonUseCaseTest.swift in Sources */,
 				2B6AC2E82B87D4DA00546E3E /* MockAppRouter.swift in Sources */,
-				2B6AC2EB2B87D4DA00546E3E /* MockPersonDetailService.swift in Sources */,
+				2B6AC2EB2B87D4DA00546E3E /* MockPersonDetailDataManager.swift in Sources */,
 				2BD1435A2B7F46E300AB224C /* PersonDetailViewControllerTest.swift in Sources */,
 				2B6AC2EF2B87D4DA00546E3E /* MockPersonData.swift in Sources */,
 				2BD1435B2B7F46E300AB224C /* PersonDetailModuleManagerTest.swift in Sources */,

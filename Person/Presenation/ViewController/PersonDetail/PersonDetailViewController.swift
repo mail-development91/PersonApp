@@ -7,20 +7,31 @@
 
 import UIKit
 
+/// PersonDetailViewController class
 final class PersonDetailViewController: UIViewController {
+    
+    /// detail view object
     private var detailView = PersonDetailView()
+    
+    /// detail view model
     var viewModel: PersonDetailViewModelProtocol?
     
+    /// viewDidLoad method
     override func viewDidLoad() {
         super.viewDidLoad()
         showDetail()
     }
     
+    /// viewWillAppear - of PersonDetailViewController
+    /// - Parameter animated: true or false param
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.view.addSubview(detailView)
         detailView.backgroundColor = UIColor.white
-        detailView.frame = CGRectMake(0 , 0, self.view.frame.width, self.view.frame.height)
+        detailView.frame = CGRectMake(0 ,
+                                      0,
+                                      self.view.frame.width,
+                                      self.view.frame.height)
     }
 }
 

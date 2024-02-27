@@ -9,12 +9,12 @@ import XCTest
 @testable import Person
 
 final class PersonDetailRepositoryTest: XCTestCase {
-    let personDetailService = MockPersonDetailService()
+    let personDetailDataManager = MockPersonDetailDataManager()
     var personDetailRepository: PersonDetailRepository!
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
-        personDetailRepository = PersonDetailRepository(personDetailService)
+        personDetailRepository = PersonDetailRepository(personDetailDataManager)
 
     }
 
@@ -24,7 +24,7 @@ final class PersonDetailRepositoryTest: XCTestCase {
     }
 
     func testLoadImageSuccess() async throws {
-        personDetailService.isError = false
+        personDetailDataManager.isError = false
         let data = MockPersonData().getImageData()
         personDetailRepository.callImageService { personImage in
             XCTAssertEqual(PersonImage(data:data), personImage, "Downloaded Correct Image")
@@ -32,7 +32,7 @@ final class PersonDetailRepositoryTest: XCTestCase {
     }
     
     func testLoadImageFail() async throws {
-        personDetailService.isError = true
+        personDetailDataManager.isError = true
         personDetailRepository.callImageService { personImage in
             XCTAssertNil(personImage, "Image is nil. NO image downloaded")
         }

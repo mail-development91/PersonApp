@@ -7,8 +7,11 @@
 
 import Foundation
 
+/// PersonRepositoryProtocol
 protocol PersonRepositoryProtocol {
+    
     /// To call Service to get Data from API
     /// - Parameter completion: complition is calback, once we get API response
-    func callService(completion: @escaping (PersonData?, PersonError?) -> ())
+    func callService(completion: @escaping (PersonData?,
+                                            PersonError?) -> ())
 }

@@ -7,9 +7,11 @@
 
 import Foundation
 
-protocol PersonServiceProtocol {
+/// PersonDataManagerProtocol
+protocol PersonDataManagerProtocol {
     
     /// To get Person List Data from API.
     /// - Parameter completion: completion Callback once to get PersonData
-    func getPersonList(completion: @escaping (PersonData?, PersonError?) -> ())
+    func getPersonList(completion: @escaping (PersonData?,
+                                              PersonError?) -> ())
 }

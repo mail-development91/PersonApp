@@ -11,7 +11,7 @@ import XCTest
 final class PersonDetailModuleManagerTest: XCTestCase {
 
     let networkManager = MockNetworkManager()
-    let mockPersonData = MockPersonData().getMockReponse().data?[0]
+    let mockPersonData = MockPersonData().getMockReponse().data?.first
     var personDetailModule: PersonDetailModuleManager!
     
     
