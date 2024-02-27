@@ -23,7 +23,9 @@ final class PersonDataManager: PersonDataManagerProtocol {
     /// - Parameter completion: completion Callback once to get PersonData
     func getPersonList(completion: @escaping (PersonData?,
                                               PersonError?) -> ()) {
-        let url = URL(string: NetworkConstants.url)!
+        guard let url = URL(string: NetworkConstants.url) else {
+            return
+        }
         self.network.fetch(url: url) { (response: Result<PersonData, Error>) in
             switch response {
             case .success(let personData):

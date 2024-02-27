@@ -22,8 +22,9 @@ final class PersonDetailDataManager : PersonDetailDataManagerProtocol {
     /// To get the Image
     /// - Parameter completion: Completion to callback
     func getImage(completion: @escaping (PersonImage?) -> ()) {
-        let url = URL(string: NetworkConstants.imageURL)!
-
+        guard let url = URL(string: NetworkConstants.imageURL) else {
+            return
+        }
         self.network.fetchImage(url: url) { data, error in
             guard let data = data, error == nil else {
                 completion(nil)
