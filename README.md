@@ -37,7 +37,7 @@ public-apis/blob/master/README.md.
   1. Download zip file OR Clone the code using - "git clone https://github.com/mail-development91/PersonApp/"
   2. Open terminal and go to the project folder
   3. Do pod install
-  4. Open workspace file in xcode tool and build the app.
+  4. Open workspace file in xcode and run the app.
 
 
 
