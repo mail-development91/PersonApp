@@ -31,11 +31,14 @@ Note: Domain Layer should not include anything from other layers(e.g Presentatio
 **NOTE:** It uses public API - https://github.com/public-apis/
 public-apis/blob/master/README.md.
 
+
+
 ****Steps to build the Code:-****
   1. Download zip file OR Clone the code using - "git clone https://github.com/mail-development91/PersonApp/"
   2. Open terminal and go to the project folder
   3. Do pod install
   4. Open workspace file in xcode tool and build the app.
+
 
 
 **screens** - Two screens are shown as
