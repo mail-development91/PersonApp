@@ -232,6 +232,31 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		2B486EA12BA88511001C9544 /* RepositoryProtocol */ = {
+			isa = PBXGroup;
+			children = (
+				2B486EA32BA8852E001C9544 /* PersonDetail */,
+				2B486EA22BA88526001C9544 /* Person */,
+			);
+			path = RepositoryProtocol;
+			sourceTree = "<group>";
+		};
+		2B486EA22BA88526001C9544 /* Person */ = {
+			isa = PBXGroup;
+			children = (
+				2BD143622B80BC9100AB224C /* PersonRepositoryProtocol.swift */,
+			);
+			path = Person;
+			sourceTree = "<group>";
+		};
+		2B486EA32BA8852E001C9544 /* PersonDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2BD1436E2B80C42400AB224C /* PersonDetailRepositoryProtocol.swift */,
+			);
+			path = PersonDetail;
+			sourceTree = "<group>";
+		};
 		2B6AC2962B860DCB00546E3E /* ModuleManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -564,6 +589,7 @@
 			isa = PBXGroup;
 			children = (
 				2BD142FB2B7F469500AB224C /* UserCase */,
+				2B486EA12BA88511001C9544 /* RepositoryProtocol */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -599,7 +625,6 @@
 		2B9C90442B8365D300B318A1 /* Person */ = {
 			isa = PBXGroup;
 			children = (
-				2BD143622B80BC9100AB224C /* PersonRepositoryProtocol.swift */,
 				2BD143632B80BC9100AB224C /* PersonRepository.swift */,
 			);
 			path = Person;
@@ -608,7 +633,6 @@
 		2B9C90452B8365D800B318A1 /* PersonDetail */ = {
 			isa = PBXGroup;
 			children = (
-				2BD1436E2B80C42400AB224C /* PersonDetailRepositoryProtocol.swift */,
 				2BD1436C2B80C40B00AB224C /* PersonDetailRepository.swift */,
 			);
 			path = PersonDetail;
